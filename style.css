@@ -23,93 +23,75 @@
     src: url("/assests/font/Inter-SemiBold.woff2");
 }
 
-.menu{
-    background-color: #de0015;
-    border-radius: 9999px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.fa-solid--grip-lines-vertical {
-    display: inline-block;
-    width: 0.5em;
-    height: 1em;
-    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512'%3E%3Cpath fill='%23000' d='M96 496V16c0-8.8-7.2-16-16-16H48c-8.8 0-16 7.2-16 16v480c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16m128 0V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v480c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16'/%3E%3C/svg%3E");
-    background-color: currentColor;
-    -webkit-mask-image: var(--svg);
-    mask-image: var(--svg);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: 100% 100%;
-    mask-size: 100% 100%;
-}
-
-/* Main container styles */
 .main {
     width: 100%;
 }
 
-/* Hero section styles */
 .hero {
     width: 100%;
     height: 100vh;
     position: relative;
 }
 
-/* SVG styles */
 .hero svg {
     position: absolute;
-    top: 1.75rem; /* 7 * 0.25rem */
+    top: 1.75rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 4rem; /* 16 * 0.25rem */
+    width: 4rem;
     fill: currentColor;
     stroke: none;
     stroke-width: 0;
 }
 
-/* Video styles */
 .hero video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Menu styles */
+
+
 .menu {
+    background-color: #de0015;
+    border-radius: 25px;
     position: absolute;
-    bottom: 2.5rem; /* 10 * 0.25rem */
+    bottom: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter-ExtraBold', sans-serif;
     font-weight: bold;
-    font-size: 1.875rem; /* 3 * 0.625rem */
-    line-height: 1.375rem; /* 22 * 0.0625rem */
-    letter-spacing: 0.05em; /* tracking-wider */
+    font-size: 1.875rem;
     color: white;
     cursor: pointer;
-    width: 2.5rem; /* 10 * 0.25rem */
-    height: 2.5rem; /* 10 * 0.25rem */
+    width: fit-content;
+    height: fit-content;
     z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem; /* 4 * 0.25rem */
+    gap: 1rem;
     text-transform: capitalize;
+    padding: 15px 20px;
 }
 
-/* Menu span styles */
 .menu span {
-    background-color: white;
-    width: 2.5rem; /* 40px */
-    height: 2.5rem; /* 40px */
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  
+   
 }
 
-/* Icon styles */
 .fa-solid--grip-lines-vertical {
-    color: #de0015;
-    transform: rotate(90deg);
+    width: 50px;
+    height: 50px;
+   background-color: black;
+  
 }
-
