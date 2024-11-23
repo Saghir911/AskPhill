@@ -1,32 +1,37 @@
 @font-face {
     font-family: "Inter-Regular";
-    src: url("/assests/font/Inter-Regular.woff2");
+    src: url("/assets/font/Inter-Regular.woff2");
 }
 
 @font-face {
     font-family: "Inter-Bold";
-    src: url("/assests/font/Inter-Bold.woff2");
+    src: url("/assets/font/Inter-Bold.woff2");
 }
 
 @font-face {
     font-family: "Inter-Light";
-    src: url("/assests/font/inter_Inter-Light.woff");
+    src: url("/assets/font/inter_Inter-Light.woff");
 }
 
 @font-face {
     font-family: "Inter-ExtraBold";
-    src: url("/assests/font/inter_Inter-ExtraBold.woff");
+    src: url("/assets/font/inter_Inter-ExtraBold.woff");
 }
 
 @font-face {
     font-family: "Inter-SemiBold";
-    src: url("/assests/font/Inter-SemiBold.woff2");
+    src: url("/assets/font/Inter-SemiBold.woff2");
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+:root{
+    --main-red-color:#de0015;
+    --width:auto:
 }
 
 .main {
@@ -55,14 +60,11 @@
     height: 100%;
     object-fit: cover;
 }
-
-
-
 .menu {
-    background-color: #de0015;
-    border-radius: 25px;
-    position: absolute;
-    bottom: 2.5rem;
+    background-color: var(--main-red-color);
+    border-radius: 50px;
+    position: fixed;
+    bottom: 3rem;
     left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter-ExtraBold', sans-serif;
@@ -70,28 +72,54 @@
     font-size: 1.875rem;
     color: white;
     cursor: pointer;
-    width: fit-content;
-    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 5px;
+    width: 250px;
     z-index: 10;
+    overflow: visible;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.icon {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    text-transform: capitalize;
-    padding: 15px 20px;
-}
-
-.menu span {
-    width: 70px;
-    height: 70px;
+    width: 75px;
+    height: 75px;
+    background-color: white;
     border-radius: 50%;
-  
-   
+    flex-shrink: 0;
+    transition: none;
 }
 
-.fa-solid--grip-lines-vertical {
-    width: 50px;
-    height: 50px;
-   background-color: black;
-  
+.menu:hover .icon,
+.menu:hover .menu-text {
+    transform: none;
+    opacity: 1;
+}
+
+.icon svg {
+    position: absolute;
+    top: 0;
+    width: 75px;
+    height: 75px;
+}
+
+.icon line {
+    stroke-width: 1.5;
+    stroke: var(--main-red-color);
+}
+
+.menu-text {
+    font-size: 40px;
+    display: inline-block;
+    text-transform: capitalize;
+    padding-right: 35px;
+    padding-left: 10px;
+    transition: none;
 }
