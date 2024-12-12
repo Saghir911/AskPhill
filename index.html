@@ -51,7 +51,7 @@
         </div>
       </div>
       <div class="second-page">
-        <div class="converstion-rate">
+        <div class="converstion-rate backward">
           <p>Conversion rate increase</p>
           <h2>+12%</h2>
           <a class="graph-div">
@@ -61,19 +61,19 @@
             <span class="graph4"></span>
           </a>
         </div>
-        <a class="brand-moved">
+        <a class="brand-moved backward">
           <p>Brand moved to shopify</p>
           <h2>150+</h2>
           <div class="arrow-icon">
             <i class="fa-solid fa-circle-arrow-up"></i>
           </div>
         </a>
-        <div class="beyond-headless">
+        <div class="beyond-headless backward">
           <img src="/assets/images/beyond-headless-img.webp" alt="Beyond Headless">
           <p>Beyond Headless</p>
           <h2>Shopify <br> Simplified</h2>
         </div>
-        <div class="brand-stories">
+        <div class="brand-stories backward">
           <h2>Brand Stories</h2>
           <img width="200" src="/assets/images/second-page-shoe.webp" alt="Beyond Headless">
           <p>Listen to our podcast</p>
@@ -81,14 +81,12 @@
             <i class="fa-solid fa-arrow-right"></i>
           </span>
         </div>
-        <div class="main-heading">
+        <div class="main-heading forward">
           <p>We build <span>the next</span>
             <br>
             in commerce.
           </p>
         </div>
-
-
       </div>
       <div class="third-page">
         <div class="text-div">
@@ -124,17 +122,20 @@
         </div>
       </div>
     </div>
-    <!-- GSAP ScrollTrigger plugin for scroll-based animations -->
+    <!-- First: Main GSAP library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Second: ScrollTrigger plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
       integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- GSAP main library for animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Third: Physics Plugin (if needed) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Physics2DPlugin.min.js"></script>
-    <!-- Custom JavaScript file for site functionality -->
+
+    <!-- Finally: Your custom script -->
     <script src="script.js"></script>
 
   </body>

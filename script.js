@@ -1,13 +1,10 @@
-// Select DOM elements for the menu animation
+/* Menu Animation */
 const menu = document.querySelector(".menu");
-const icon = menu.querySelector(".icon"); 
+const icon = menu.querySelector(".icon");
 const menuText = menu.querySelector(".menu-text");
 
-// Create forward animation timeline (paused initially)
+// Menu open timeline
 let tl = gsap.timeline({ paused: true });
-
-// Add animations to forward timeline:
-// 1. Fade out and move menu text right
 tl.to(
   menuText,
   {
@@ -18,44 +15,38 @@ tl.to(
   },
   0
 )
-  // 2. Move and rotate the icon
-  .to(
-    icon,
-    {
-      x: 90,
-      rotation: 90,
-      duration: 0.5,
-      ease: "elastic.out(.5, 0.5)", // Bouncy elastic animation
-    },
-    0
-  )
-  // 3. Expand the menu width
-  .to(
-    menu,
-    {
-      width: "280px",
-      duration: 0.6,
-      ease: "back.out(1.7)", // Slight overshoot animation
-    },
-    0
-  );
+.to(
+  icon,
+  {
+    x: 90,
+    rotation: 90,
+    duration: 0.5,
+    ease: "elastic.out(.5, 0.5)",
+  },
+  0
+)
+.to(
+  menu,
+  {
+    width: "280px",
+    duration: 0.6,
+    ease: "back.out(1.7)",
+  },
+  0
+);
 
-// Create reverse animation timeline (paused initially) 
+// Menu close timeline
 let reverseTl = gsap.timeline({ paused: true });
-
-// Add reverse animations:
-// 1. Fade in and reset menu text position
 reverseTl.to(
   menuText,
   {
     x: 0,
-    opacity: 1, 
+    opacity: 1,
     duration: 0.3,
     ease: "power2.inOut",
   },
   0
 )
-// 2. Reset icon position and rotation
 .to(
   icon,
   {
@@ -66,7 +57,6 @@ reverseTl.to(
   },
   0
 )
-// 3. Reset menu width
 .to(
   menu,
   {
@@ -77,14 +67,69 @@ reverseTl.to(
   0
 );
 
-// Play forward animation on hover
+// Menu hover events
 menu.addEventListener("mouseenter", () => {
   reverseTl.pause();
   tl.restart();
 });
 
-// Play reverse animation when hover ends
 menu.addEventListener("mouseleave", () => {
-  tl.pause(); 
+  tl.pause();
   reverseTl.restart();
+});
+
+// Parallax movement animation
+let second_page = document.querySelector(".second-page");
+let movingBackward = document.querySelectorAll(".backward");
+let movingForward = document.querySelector(".forward");
+
+second_page.addEventListener("mousemove", (dets) => {
+  let x = dets.clientX;
+  let y = dets.clientY;
+  
+  movingBackward.forEach((elem) => {
+    gsap.to(elem, {
+      x: -x * 0.05,
+      y: -y * 0.05,
+      duration: 0.3,
+      ease: "power1.out",
+    });
+  });
+
+  gsap.to(movingForward, {
+    x: x * 0.05,
+    y: y * 0.05,
+    duration: 0.3,
+    ease: "power1.out",
+  });
+});
+
+// Scroll animations for upper elements
+gsap.from(".converstion-rate, .brand-moved", {
+  scrollTrigger: {
+    trigger: ".second-page",
+    start: "top 60%",
+    toggleActions: "play none none reverse",
+  },
+  scale: 0,
+  opacity: 0,
+  y: 30,
+  duration: 0.5,
+  stagger: 0.05,
+  ease: "back.out(2)",
+});
+
+// Scroll animations for lower elements
+gsap.from(".beyond-headless, .brand-stories", {
+  scrollTrigger: {
+    trigger: ".beyond-headless",
+    start: "top 80%",
+    toggleActions: "play none none reverse",
+  },
+  scale: 0,
+  opacity: 0,
+  y: 30,
+  duration: 0.5,
+  stagger: 0.05,
+  ease: "back.out(2)",
 });
