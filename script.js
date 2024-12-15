@@ -177,7 +177,36 @@ accordionItems.forEach((item) => {
       opacity: 0,
       y: 10,
       duration: 0.3,
-       ease: "power2.out",
+      ease: "power2.out",
     });
+  });
+});
+
+// Add this new code for text animation
+document.addEventListener("DOMContentLoaded", () => {
+  // Create the split text
+  const text = new SplitType(".expertise-title", {
+    types: "chars",
+    tagName: "span",
+  });
+
+  // Hide all characters initially
+  gsap.set(text.chars, {
+    opacity: 0,
+    y: 90,
+  });
+
+  // Animate the characters when scrolled into view
+  gsap.to(text.chars, {
+    opacity: 1,
+    y: 0,
+    duration: 0.3,
+    stagger: 0.05,
+    ease: "ease",
+    scrollTrigger: {
+      trigger: ".expertise-title",
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
   });
 });
