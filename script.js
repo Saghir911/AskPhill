@@ -210,3 +210,45 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 });
+
+// Assuming you have a button with a class of 'fifth-page-button'
+const button = document.querySelector(".fifth-page button");
+
+button.addEventListener("mouseenter", () => {
+  gsap.to(button, {
+    width: "160px", // Change width on hover
+    duration: 0.4, // Duration for the hover effect
+    ease: "bounce.out", // Bounce easing for hover
+  });
+});
+
+button.addEventListener("mouseleave", () => {
+  gsap.to(button, {
+    width: "150px", // Return to original width
+    duration: 0.4, // Duration for the return effect
+    ease: "bounce.out", // Bounce easing for return
+  });
+});
+
+// Assuming you have a circle with a class of 'shopify-circle'
+const shopifyCircle = document.querySelector(".shopify-circle");
+const shopifyIconContainer = document.querySelector(".shopify-icon-container");
+
+
+
+// Create an Intersection Observer
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        shopifyCircle.style.transform = `translateX(100%)`; // Animate the circle position based on the intersection ratio
+      }   
+    });
+  },
+  {
+    threshold: [0.5], // Trigger when the element is at least 50% visible
+  }
+);
+
+// Start observing the shopifyIconContainer
+observer.observe(shopifyIconContainer);
