@@ -252,3 +252,5 @@ const observer = new IntersectionObserver(
 
 // Start observing the shopifyIconContainer
 observer.observe(shopifyIconContainer);
+
+
