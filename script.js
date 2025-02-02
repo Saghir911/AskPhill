@@ -254,3 +254,4 @@ const observer = new IntersectionObserver(
 observer.observe(shopifyIconContainer);
 
 
+// sixth page card anmiation 
