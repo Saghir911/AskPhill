@@ -709,6 +709,7 @@
   flex-direction: column;
   background-color: #f8f8f6;
 }
+
 .sixth-page h2 {
   font-size: 96px;
   color: var(--modern-black);
@@ -743,11 +744,12 @@
   min-height: 120vh;
   overflow: visible;
 }
+
 .card-container .card {
   width: 372px;
   height: 550px;
   aspect-ratio: 1/1.5;
-  position: absolute; 
+  position: absolute;
   border-radius: 20px;
   padding: 16px;
   display: flex;
@@ -756,17 +758,20 @@
   justify-content: space-between;
   cursor: pointer;
 }
+
 .card-container .card:hover {
-  animation: card-bounce 0.3s ease-in
-  forwards;
+  animation: card-bounce 0.3s ease-in forwards;
 }
+
 @keyframes card-bounce {
   0% {
     scale: 1;
   }
+
   70% {
     scale: 1.05;
   }
+
   100% {
     scale: 1.02;
   }
@@ -868,4 +873,312 @@
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
+}
+
+/* Responsive styles */
+/* Base responsive settings */
+html {
+  font-size: 16px;
+  /* Base font size for rem units */
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Common responsive adjustments */
+img,
+video {
+  max-width: 100%;
+}
+
+/* Media queries */
+@media (max-width: 1200px) {
+  .second-page .main-heading p {
+    font-size: 70px;
+    line-height: 65px;
+  }
+
+  .text-div h2,
+  .fourth-page h2,
+  .fifth-page h2,
+  .sixth-page h2 {
+    font-size: 70px;
+    line-height: 75px;
+  }
+
+  .fifth-page p {
+    width: 80%;
+    font-size: 45px;
+    line-height: 48px;
+  }
+
+  .shopify-icon-container {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 2/1;
+  }
+
+  .shopify-circle {
+    width: 45%;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .converstion-rate,
+  .brand-moved,
+  .beyond-headless,
+  .brand-stories {
+    position: static;
+    margin: 20px auto;
+    width: 80%;
+  }
+
+  .second-page {
+    height: auto;
+    padding: 5rem 2rem;
+  }
+
+  .third-page {
+    flex-direction: column;
+    height: auto;
+    padding: 5rem 2rem;
+  }
+
+  .text-div,
+  .image-div {
+    width: 100%;
+  }
+
+  .image-div .card {
+    position: static;
+    width: 100%;
+    margin-bottom: 2rem;
+    transform: none !important;
+  }
+
+  .image-div .card .card-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .accordion-content {
+    width: 100%;
+  }
+
+  .accordion-content p {
+    width: 100%;
+  }
+
+  .card-container {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .card-container .card {
+    position: static;
+    margin: 1rem auto;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    width: 200px;
+    padding: 4px;
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .menu-text {
+    font-size: 30px;
+    padding-right: 25px;
+  }
+
+  .second-page .main-heading p {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .text-div h2,
+  .fourth-page h2,
+  .fifth-page h2,
+  .sixth-page h2 {
+    font-size: 50px;
+    line-height: 55px;
+    letter-spacing: -2px;
+  }
+
+  .fifth-page p {
+    width: 100%;
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .converstion-rate,
+  .brand-moved,
+  .beyond-headless,
+  .brand-stories {
+    width: 100%;
+    height: auto;
+  }
+
+  .converstion-rate h2,
+  .brand-moved h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .fourth-page {
+    padding: 100px 20px;
+  }
+
+  .accordion .accordion-item h3 {
+    font-size: 28px;
+  }
+
+  .accordion-item.expanded h3 {
+    font-size: 35px;
+  }
+
+  .accordion-content p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .card-container .card {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 1/1.5;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero svg {
+    width: 3rem;
+    top: 1rem;
+  }
+
+  .menu {
+    width: 180px;
+    bottom: 2rem;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .menu-text {
+    font-size: 24px;
+    padding-right: 20px;
+  }
+
+  .second-page .main-heading p {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .text-div h2,
+  .fourth-page h2,
+  .fifth-page h2,
+  .sixth-page h2 {
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: -1px;
+  }
+
+  .fifth-page p {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .converstion-rate p,
+  .brand-moved p,
+  .beyond-headless p,
+  .brand-stories p {
+    font-size: 16px;
+  }
+
+  .converstion-rate h2,
+  .brand-moved h2 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .beyond-headless h2,
+  .brand-stories h2 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .graph-div span {
+    width: 50px;
+  }
+
+  .text-div p {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .accordion .accordion-item {
+    height: 80px;
+    padding: 15px;
+  }
+
+  .accordion .accordion-item h3 {
+    font-size: 22px;
+    letter-spacing: -1px;
+  }
+
+  .accordion-item.expanded {
+    height: auto;
+    min-height: 250px;
+    padding: 20px;
+  }
+
+  .accordion-item.expanded h3 {
+    font-size: 28px;
+  }
+
+  .accordion-content button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .fifth-page,
+  .sixth-page {
+    padding: 100px 20px;
+  }
+
+  .fifth-page button,
+  .sixth-page button {
+    width: 180px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .card-container .card h3 {
+    font-size: 24px;
+  }
+
+  .card-container .card .cardimgdiv {
+    height: 180px;
+  }
 }
