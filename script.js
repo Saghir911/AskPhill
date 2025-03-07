@@ -254,4 +254,7 @@ const observer = new IntersectionObserver(
 observer.observe(shopifyIconContainer);
 
 
-// sixth page card anmiation 
+// todo: sixth page card anmiation 
+
+let sixthPage = document.querySelector(".sixth-page")
+let sixthPageCard = document.querySelector(".sixth-page .container

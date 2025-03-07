@@ -744,7 +744,7 @@
   overflow: visible;
 }
 .card-container .card {
-  width: 392px;
+  width: 372px;
   height: 550px;
   aspect-ratio: 1/1.5;
   position: absolute; 
@@ -808,14 +808,14 @@
 .card-container .card1 {
   background-color: #2255ff;
   transform: rotate(-4deg);
-  left: 80%;
+  left: 70%;
   top: 10%;
   z-index: 5;
 }
 
 .card-container .card2 {
   background-color: #fff;
-  transform: rotate(-3deg);
+  transform: rotate(3deg);
   left: 55%;
   top: 30%;
   z-index: 4;
@@ -823,8 +823,8 @@
 
 .card-container .card3 {
   background-color: #cd6b45;
-  transform: rotate(7deg);
-  left: 40%;
+  transform: rotate(-7deg);
+  left: 35%;
   top: 10%;
   z-index: 3;
 }
@@ -832,15 +832,15 @@
 .card-container .card4 {
   background-color: #d85c85;
   transform: rotate(-3deg);
-  left: 25%;
+  left: 20%;
   top: 30%;
   z-index: 2;
 }
 
 .card-container .card5 {
   background-color: #0c2646;
-  transform: rotate(5deg);
-  left: 10%;
+  transform: rotate(-5deg);
+  left: 0%;
   top: 10%;
   z-index: 1;
 }
