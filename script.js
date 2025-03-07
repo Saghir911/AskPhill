@@ -234,15 +234,13 @@ button.addEventListener("mouseleave", () => {
 const shopifyCircle = document.querySelector(".shopify-circle");
 const shopifyIconContainer = document.querySelector(".shopify-icon-container");
 
-
-
 // Create an Intersection Observer
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         shopifyCircle.style.transform = `translateX(100%)`; // Animate the circle position based on the intersection ratio
-      }   
+      }
     });
   },
   {
@@ -253,8 +251,7 @@ const observer = new IntersectionObserver(
 // Start observing the shopifyIconContainer
 observer.observe(shopifyIconContainer);
 
+// todo: sixth page card animation
 
-// todo: sixth page card anmiation 
-
-let sixthPage = document.querySelector(".sixth-page")
-let sixthPageCard = document.querySelector(".sixth-page .container
+let sixthPage = document.querySelector(".sixth-page");
+let sixthPageCard = document.querySelector(".sixth-page .card-container");
